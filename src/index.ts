@@ -1,4 +1,3 @@
-// Step 2: import the `ux` and `sdk` modules from the @cto.ai/sdk package
 import { ux, sdk } from "@cto.ai/sdk";
 
 import createApplication from "./controllers";
@@ -30,7 +29,6 @@ export const main = async () => {
   });
 
   // Retrieve Github token
-  // Step 4: retrieve the token saved as secret under the key `GITHUB_ACCESS_TOKEN` using `sdk.getSecret`
   const { GITHUB_ACCESS_TOKEN } = await sdk.getSecret("GITHUB_ACCESS_TOKEN");
   await track({
     event: "Github access token retrieved",
@@ -45,13 +43,11 @@ export const main = async () => {
 
     // Prompt user to select site type (user or project)
     const infoSiteTypes = generateInfoSiteTypes(githubUserName);
-    // Step 3: print out the generated info message using `ux.print`
     await ux.print(infoSiteTypes);
 
     const { siteType } = await ux.prompt(getSiteType(githubUserName));
 
     // Prompt user for Twitter and Linkedin handles
-    // Step 3: pass the array of Question objects to prompt for social media handles to `ux.prompt`
     const socialMedia: SocialMedia = await ux.prompt(getSocialMediaHandles);
 
     const isUserSite = !siteType.includes('resume');
@@ -96,24 +92,19 @@ export const main = async () => {
       appUrl,
     });
 
-    // Step 6: call the utility method `track` to record the successful completion of the Op
-    // make sure you also record the `githubUserName` and `projectName` the Op was used with
     await track({
       event: `Op Completed Successfully`,
       githubUserName,
       projectName
     });
   } catch (error) {
-    // Step 5: log the error to the console using `sdk.log`
     sdk.log(error);
 
-    // Step 6: call the utility method `track` to record the successful completion of the Op
-    // make sure you also record the stringified error object `JSON.stringify(error)`
     await track({
       event: `Op Failed`,
       error: JSON.stringify(error),
     });
-    
+
     process.exit(1);
   }
 };

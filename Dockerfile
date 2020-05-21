@@ -14,14 +14,12 @@ ADD . .
 
 RUN mkdir lib
 
-# Step 1: the Op is using Typescript and needs to be compiled
 RUN npm run build
 
 ############################
 # Final container
 ############################
 
-# Step 1: the final container must be built with one of the official images
 FROM registry.cto.ai/official_images/node:2-12.13.1-stretch-slim
 
 WORKDIR /ops

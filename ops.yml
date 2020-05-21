@@ -2,13 +2,10 @@
 version: "1"
 commands:
   - name: resume-generator:1.0.0
-    # Step 1: the Op should be public
     public: true
     description: Generate & deploy a resume website on Github Pages.
-    # Step 1: the Op should run the built index.js file from the correct path
     run: node /ops/lib/index.js
     sdk: "2"
-    # Step 1: the Op should be enabled for running in Slack
     remote: true
     sourceCodeURL: "https://github.com/cto-ai/resume-generator"
     src:

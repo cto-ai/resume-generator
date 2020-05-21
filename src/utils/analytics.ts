@@ -7,9 +7,5 @@ export const track = async (trackingData) => {
   };
   const trackingTags = ["track", "cto.ai-official-op", "resume-generator"];
 
-  // Step 6: track events and associated metadata using `sdk.track`
-  await sdk.track(
-    trackingTags,
-    metadata
-  );
+  await sdk.track(trackingTags, metadata);
 };

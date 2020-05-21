@@ -50,17 +50,11 @@ const customizeConfigFile = async (
     .replace(/FIRST_NAME = '.*'/g, `FIRST_NAME = '${firstName}'`)
     .replace(/LAST_NAME = '.*'/g, `LAST_NAME = '${lastName}'`)
     .replace(/EMAIL = '.*'/g, `EMAIL = '${userEmail}'`)
-    .replace(
-      /GITHUB_USERNAME = '.*'/g,
-      `GITHUB_USERNAME = '${githubUserName}'`
-    )
+    .replace(/GITHUB_USERNAME = '.*'/g, `GITHUB_USERNAME = '${githubUserName}'`)
     .replace(/TWITTER_USERNAME = '.*'/g, `TWITTER_USERNAME = '${twitter}'`)
-    .replace(
-      /LINKEDIN_USERNAME = '.*'/g,
-      `LINKEDIN_USERNAME = '${linkedin}'`
-    );
+    .replace(/LINKEDIN_USERNAME = '.*'/g, `LINKEDIN_USERNAME = '${linkedin}'`);
   fs.writeFileSync(configFilePath, updatedConfigFileContents);
-}
+};
 
 const customizeWorkflowFile = async (
   projectName: string,
@@ -75,7 +69,7 @@ const customizeWorkflowFile = async (
       .replace(/BRANCH: gh-pages/g, `BRANCH: master`);
     fs.writeFileSync(workflowPath, updatedWorkflowFileContents);
   }
-}
+};
 
 export const customizeApp = async (
   projectName: string,

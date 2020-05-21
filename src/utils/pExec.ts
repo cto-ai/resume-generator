@@ -9,7 +9,6 @@ export const pExec = sdk.exec;
 export const pExecWithLogs = async (command: string) => {
   await ux.print(bold(`Running \`${magenta(command)}\``));
 
-  // Step 5: execute the `command` by passing it to `sdk.exec`
   const { stdout, stderr } = (await sdk.exec(command)) as {
     stdout: string;
     stderr: string;
