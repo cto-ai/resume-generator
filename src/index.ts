@@ -98,16 +98,22 @@ export const main = async () => {
 
     // Step 6: call the utility method `track` to record the successful completion of the Op
     // make sure you also record the `githubUserName` and `projectName` the Op was used with
-    // TODO: add your code on the lines below
-    
+    await track({
+      event: `Op Completed Successfully`,
+      githubUserName,
+      projectName
+    });
   } catch (error) {
     // Step 5: log the error to the console using `sdk.log`
     sdk.log(error);
 
     // Step 6: call the utility method `track` to record the successful completion of the Op
     // make sure you also record the stringified error object `JSON.stringify(error)`
-    // TODO: add your code on the lines below
-   
+    await track({
+      event: `Op Failed`,
+      error: JSON.stringify(error),
+    });
+    
     process.exit(1);
   }
 };
