@@ -31,8 +31,7 @@ export const main = async () => {
 
   // Retrieve Github token
   // Step 4: retrieve the token saved as secret under the key `GITHUB_ACCESS_TOKEN` using `sdk.getSecret`
-  // TODO: add your code on the line below
-  const { GITHUB_ACCESS_TOKEN } = 
+  const { GITHUB_ACCESS_TOKEN } = await sdk.getSecret("GITHUB_ACCESS_TOKEN");
   await track({
     event: "Github access token retrieved",
   });
