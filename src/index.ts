@@ -47,14 +47,13 @@ export const main = async () => {
     // Prompt user to select site type (user or project)
     const infoSiteTypes = generateInfoSiteTypes(githubUserName);
     // Step 3: print out the generated info message using `ux.print`
-    // TODO: add your code on this line
+    await ux.print(infoSiteTypes);
 
     const { siteType } = await ux.prompt(getSiteType(githubUserName));
 
     // Prompt user for Twitter and Linkedin handles
     // Step 3: pass the array of Question objects to prompt for social media handles to `ux.prompt`
-    // TODO: add your code on the line below
-    const socialMedia: SocialMedia = 
+    const socialMedia: SocialMedia = await ux.prompt(getSocialMediaHandles);
 
     const isUserSite = !siteType.includes('resume');
     let projectName = `resume`;

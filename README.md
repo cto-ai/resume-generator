@@ -1,6 +1,6 @@
 ![CTO Banner](https://cto.ai/static/oss-banner.png)
 
-# Resume Generator 🚀 (Step 3)
+# Resume Generator 🚀 (Step 4)
 
 This Op will Generate & deploy a resume website on Github Pages, using a CTO.ai customized [Gatsby template](https://github.com/cto-ai/gatsby-resume-template).
 

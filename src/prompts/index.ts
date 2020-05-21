@@ -11,5 +11,17 @@ export const getSiteType = (user: string): Question<{ siteType: string }> => {
 
 // Step 3: export an array of Question objects to prompt for social media handles
 // the prompts should have the following names: `twitter`, `linkedin`
-// TODO: add your code on this line and below
-export const getSocialMediaHandles: Question[] = 
+export const getSocialMediaHandles: Question[] = [
+  {
+    type: "input",
+    name: "twitter",
+    message: "What's your Twitter handle?",
+    default: "janedoe"
+  },
+  {
+    type: "input",
+    name: "linkedin",
+    message: "What's your Linkedin handle?",
+    default: "janedoe"
+  }
+];
