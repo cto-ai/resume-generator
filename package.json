@@ -15,6 +15,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@cto.ai/sdk": "^2.1.4",
     "@octokit/rest": "^16.38.1",
     "prettier": "^2.0.5",
     "simple-git": "^1.131.0",
