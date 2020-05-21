@@ -2,7 +2,7 @@
 
 # Resume Generator 🚀
 
-This Op will Generate & deploy a resume website on Github Pages, using a CTO.ai customized [Gatsby template](https://github.com/cto-ai/gatsby-resume-template).
+This Op will generate & deploy a resume website on Github Pages, using a CTO.ai customized [Gatsby template](https://github.com/cto-ai/gatsby-resume-template).
 
 ## Requirements
 
