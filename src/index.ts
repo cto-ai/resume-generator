@@ -102,7 +102,7 @@ export const main = async () => {
     
   } catch (error) {
     // Step 5: log the error to the console using `sdk.log`
-    // TODO: add your code on this line
+    sdk.log(error);
 
     // Step 6: call the utility method `track` to record the successful completion of the Op
     // make sure you also record the stringified error object `JSON.stringify(error)`
