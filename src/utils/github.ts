@@ -182,7 +182,8 @@ const waitForWorklowCompleted = async ({
   github,
   githubUserName,
   projectName,
-  appUrl
+  appUrl,
+  repoUrl
 }: WorkflowStatusCheckConfig) => {
   try {
     await track({
@@ -228,7 +229,8 @@ export const buildAndDeploy = async ({
   github,
   githubUserName,
   projectName,
-  appUrl
+  appUrl,
+  repoUrl
 }: WorkflowStatusCheckConfig) => {
   await ux.spinner.start(
     "🏗  Building and deploying your new online resume. Please wait..."
@@ -240,7 +242,8 @@ export const buildAndDeploy = async ({
       github,
       githubUserName,
       projectName,
-      appUrl
+      appUrl,
+      repoUrl
     });
 
     // Wait until workflow has completed
@@ -248,7 +251,8 @@ export const buildAndDeploy = async ({
       github,
       githubUserName,
       projectName,
-      appUrl
+      appUrl,
+      repoUrl
     });
 
     await ux.spinner.stop(
@@ -264,8 +268,8 @@ export const buildAndDeploy = async ({
     );
     await ux.print(
       `Failed to wait for Github Actions workflow to complete. Please check ${cyanBright(
-        `${appUrl}/actions`
-      )}. If the workflow is not detected, try pushing a new commit in the main branch.`
+        `${repoUrl}/actions`
+      )}.\nIf the workflow is not detected, try pushing a new commit in the main branch.`
     );
     throw error;
   }

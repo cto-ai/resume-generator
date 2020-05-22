@@ -90,6 +90,7 @@ export const main = async () => {
       githubUserName,
       projectName,
       appUrl,
+      repoUrl: newRepo.html_url
     });
 
     await track({

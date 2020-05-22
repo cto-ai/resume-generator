@@ -36,4 +36,5 @@ export interface WorkflowStatusCheckConfig {
   githubUserName: string;
   projectName: string;
   appUrl: string;
+  repoUrl: string;
 }

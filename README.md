@@ -77,6 +77,8 @@ This is what you can do to make sure you get your application deployed in each s
 - If you see a workflow named `github pages` on the left side, under `All workflows`, it means Github Actions correctly detected the workflow, but was a bit delayed and the build didn't complete before the Op timed out on polling. As soon as you'll see the workflow complete for the initial commit in the repository, you should be able to access your online resume at the designated URL (see above).
 - If you do not see any workflows, it means Github Actions has failed to detect the workflow configuration file. Try making a commit and push it to the main branch of your repository; in most cases, Github Actions should now detect the workflow and start running the build. Wait for completion, then access your online resume at the designated URL.
 
+Note that it is also possible that Github has issues; check out https://www.githubstatus.com/ and maybe try again later when everything is green on their side.
+
 ### Application successfully built and deploy, but getting 404 when visiting URL
 
 If your workflow has successfully completed, then this is likely because Github Pages sometimes has a delay in reflecting the changes. The first time you generate your site, it could take about 10 minutes for it to show up, and possibly longer if it's a user site. If you are pushing subsequent updates, keep in mind that Github Pages are cached with CDN, so sometimes you might need a bit longer to see the changes reflected.
