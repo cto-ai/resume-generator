@@ -42,7 +42,7 @@ ops secrets:set -k GITHUB_ACCESS_TOKEN -v <VALUE>
 
 ## Features
 
-This Op will allow you to create a deploy an online resume with ease! It will automatically connect to your Github account, create a public repository for you, scaffold an online resume website inside it, and automatically deploy it to Github Pages using a Github Actions workflow. To continue customizing your online resume, just edit, push, and your changes will be live! Or feel free to fork this repository and extend and customize the Op to your heart's desire!
+This Op will allow you to create and deploy an online resume with ease! It will automatically connect to your Github account, create a public repository for you, scaffold an online resume website inside it, and automatically deploy it to Github Pages using a Github Actions workflow. To continue customizing your online resume, just edit, push, and your changes will be live! Or feel free to fork this repository and extend and customize the Op to your heart's desire!
 
 There are two options for deploying the online resume, as per Github Pages:
 

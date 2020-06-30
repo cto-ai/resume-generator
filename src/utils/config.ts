@@ -36,7 +36,7 @@ Check out the readme for instructions on how to generate and set the token as a 
 
 export const intro = `
 \n👋  ${bgBlueBright("Welcome to the CTO.ai Resume Generator")} 👋
-\nThis Op will allow you to create a deploy an online resume with ease!
+\nThis Op will allow you to create and deploy an online resume with ease!
 \nIt will automatically connect to your Github account, create a public repository for you, scaffold an online resume website inside it, and automatically deploy it to Github Pages. To continue customizing your online resume, just edit, push, and your changes will be live!`;
 
 export const generateInfoSiteTypes = (user: string) =>
