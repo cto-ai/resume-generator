@@ -18,7 +18,7 @@
     "@cto.ai/sdk": "^2.1.4",
     "@octokit/rest": "^16.38.1",
     "prettier": "^2.0.5",
-    "simple-git": "^1.131.0",
+    "simple-git": "^3.15.0",
     "ts-node": "^8.1.0",
     "tweetsodium": "0.0.5",
     "typescript": "^3.4.5"
